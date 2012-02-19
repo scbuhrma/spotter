@@ -3,9 +3,10 @@
   <head>
     <!--- styles --->
     <link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
-
+	<link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css">
     <!--- libraries --->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="http://twitter.github.com/bootstrap/1.4.0/bootstrap-modal.js"></script>
     <script src="scripts/lib/spotter.js"></script>
 
     <!--- program --->
@@ -13,15 +14,35 @@
 
   </head>
 
-  <body>
-    <h1>Spotter skeleton</h1>
+  <body id="sbody">
+    <br>
+    <br>
     
-    <div id="inpot">
+		<div class="container">
+				<div id="header" class="hero-unit hero-unit-style">
+					<h1 class="hero-text">
+						<br>Spotter Project Title</br>
+						
+					</h1>
+					<br>
+					<div id="inpot">
     <input type="text" placeholder="Enter a search term" id="term" />
-    <button id="sbutton" >Go!</button>
+    <button id="sbutton" > Go! </button>
     </div>
+    <br>
     
-    <button id="search" >New Search</button>
+    
+    
+    <div id="tweets">
+      
+    	</div>
+    	<br>
+    	<button id="search" > New Search </button>
+			</div>
+		</div>
+
+    
+   
     
     <div id="tweets">
       

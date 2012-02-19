@@ -1,11 +1,23 @@
-body {
-    background: #eef;
+#sbody{
+	background: black;
 }
 
 .green{
 	background: green;
 }
 
-.teal{
-	background: teal;
+#header {
+	background-color: #68b3ff;
+	text-shadow: 0px 0px 15px #000;
+	text-align: center;
+	}
+	
+#sbutton{
+	height: 25px;
+	width: 45px;
+}
+
+#search{
+	height: 25px;
+	width: 90px;
 }
