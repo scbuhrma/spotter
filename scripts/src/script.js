@@ -19,8 +19,8 @@ function main() {
      
    	 var term = $("#term").val();
      var s  = new Spotter("twitter.search",
-	{q:term,period:750},
-	{buffer:true,bufferTimeOut:750});
+	{q:term, period:750, lang:"en"},
+	{buffer:true,bufferTimeout:5000});
 
 
 	 $("#search").click(function(){
@@ -39,13 +39,12 @@ function main() {
         if(twitCount==1){
 	    $("#tweets p:last-child").remove();
             twitCount=0;
-            s.stop();
 	}
         
         
 
 
-	$("#tweets").prepend($("<p>"+profile_image+tweet.text.match(/[A-z]*[^,]/g)+"</p>").fadeOut("slow"));
+	$("#tweets").prepend($("<p>"+profile_image+tweet.text+"</p>"));
 	twitCount++;
 	
 	
