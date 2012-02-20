@@ -44,7 +44,7 @@ function main() {
         
 
 
-	$("#tweets").prepend($("<p>"+profile_image+tweet.text+"</p>"));
+	$("#tweets").prepend($("<p>"+profile_image+' '+tweet.text+"</p>"));
 	twitCount++;
 	
 	
