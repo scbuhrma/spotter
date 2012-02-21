@@ -23,8 +23,8 @@
 	position: absolute;
 	height: 25px;
 	width: 90px;
-	top: 80%;
-	left: 45%;
+	top: 90%;
+	left: 47.5%;
 	visibility: hidden;
 }
 
@@ -38,6 +38,12 @@
 #tweetcontain{
 	background-color: #3fbdff;
 
+}
+
+#swears{
+	position: absolute;
+	top: 80%;
+	left: 70%;
 }
 
 

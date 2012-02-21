@@ -42,13 +42,13 @@ function main() {
             twitCount=0;
             
             
-     var cussArray = tweet.text.match(/fuck|\sass\s|bitch|pussy/g);
+     var cussArray = tweet.text.match(/fuck|\sass\s|bitch|pussy|arse|\sbeaner\s|\sbutt-pirate\s|\schink\s|\schinc\s|clit|cock|cunt|damn|dick|douche|faggit|faggot|\sfudgepacker\s|gringo|guido|honkey|jizz|kunt|kooch|nigger|nig|piss|queef|queer|shit|Shit|slut|\sspic\s|twat|tit|whore|wetback|wop/g);
      for(var i in cussArray){
      	totalcusscount++;
      }    
      
      
-     var censor = tweet.text.replace(/fuck|\sass\s|bitch|pussy/g,"*****");
+     var censor = tweet.text.replace(/fuck|\sass\s|bitch|pussy|arse|\sbeaner\s|\sbutt-pirate\s|\schink\s|\schinc\s|clit|cock|cunt|damn|dick|douche|faggit|faggot|\sfudgepacker\s|gringo|guido|honkey|jizz|kunt|kooch|nigger|nig|piss|queef|queer|shit|Shit|slut|\sspic\s|twat|tit|whore|wetback|wop/g,"*****");
      	
     
      $("#uhoh").text(totalcusscount);
