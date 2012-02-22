@@ -4,13 +4,11 @@ $(document).ready(function(){
 
 		$("#inpot").fadeOut();
 		$("#search").fadeIn();
+		$("swears").fadeIn();
 		$("#search").css("visibility", "visible");
 
 		main();
 		});
-
-
-
 		});
 
 
@@ -28,6 +26,7 @@ function main() {
 
 		$("#search").fadeOut();
 		$("#inpot").fadeIn();
+		$("swears").fadeOut();
 		$("#tweets p").remove();
 		s.stop();
 		});
@@ -42,7 +41,7 @@ function main() {
             twitCount=0;
             
             
-     var cussArray = tweet.text.match(/fuck|\sass\s|bitch|pussy|arse|\sbeaner\s|\sbutt-pirate\s|\schink\s|\schinc\s|clit|cock|cunt|damn|dick|douche|faggit|faggot|\sfudgepacker\s|gringo|guido|honkey|jizz|kunt|kooch|nigger|nig|piss|queef|queer|shit|Shit|slut|\sspic\s|twat|tit|whore|wetback|wop/g);
+     var cussArray = tweet.text.match(/fuck|FUCK|\sass\s|bitch|pussy|arse|\sbeaner\s|\sbutt-pirate\s|\schink\s|\schinc\s|clit|cock|cunt|damn|dick|douche|faggit|faggot|\sfudgepacker\s|gringo|guido|honkey|jizz|kunt|kooch|nigger|nig|piss|queef|queer|shit|Shit|slut|\sspic\s|twat|tit|whore|wetback|wop/g);
      for(var i in cussArray){
      	totalcusscount++;
      }    
