@@ -4,10 +4,64 @@ $(document).ready(function(){
 
 		$("#inpot").fadeOut();
 		$("#search").fadeIn();
-		$("swears").fadeIn();
+		$("#swears").fadeIn();
 		$("#search").css("visibility", "visible");
+		$("#swears").css("visibility", "visible");
 
 		main();
+		});
+		
+		$("#help").click(function(){
+
+		$("#search").fadeOut();
+		$("#inpot").fadeOut();
+		$("#swears").fadeOut();
+		$("#title").fadeOut();
+		$("#tweets p").remove();
+		$("#apple").css("visibility", "visible");
+		$("#orange").css("visibility", "hidden");
+		$("#hreturn").css("visibility", "visible");
+		$("#areturn").css("visibility", "hidden");
+		$("#help").css("visibility", "hidden");
+		$("#jesus").css("visibility", "visible");
+		s.stop();
+		});
+		
+		$("#jesus").click(function(){
+
+		$("#search").fadeOut();
+		$("#inpot").fadeOut();
+		$("#swears").fadeOut();
+		$("#title").fadeOut();
+		$("#tweets p").remove();
+		$("#orange").css("visibility", "visible");
+		$("#apple").css("visibility", "hidden");
+		$("#areturn").css("visibility", "visible");
+		$("#hreturn").css("visibility", "hidden");
+		$("#areturn").css("visibility", "visible");
+		$("#jesus").css("visibility", "hidden");
+		$("#help").css("visibility", "visible");
+		s.stop();
+		});
+		
+		$("#hreturn").click(function(){
+		
+		$("#title").fadeIn();
+		$("#inpot").fadeIn();
+		$("#apple").css("visibility", "hidden");
+		$("#hreturn").css("visibility", "hidden");
+		$("#help").css("visibility", "visible");
+		s.stop();
+		});
+		
+		$("#areturn").click(function(){
+
+		$("#title").fadeIn();
+		$("#inpot").fadeIn();
+		$("#orange").css("visibility", "hidden");
+		$("#areturn").css("visibility", "hidden");
+		$("#jesus").css("visibility", "visible");
+		s.stop();
 		});
 		});
 
@@ -19,17 +73,72 @@ function main() {
    	 var term = $("#term").val();
      var s  = new Spotter("twitter.search",
 	{q:term, period:750, lang:"en"},
-	{buffer:true,bufferTimeout:5000});
+	{buffer:true,bufferTimeout:7000});
 
 
 	 $("#search").click(function(){
 
 		$("#search").fadeOut();
 		$("#inpot").fadeIn();
-		$("swears").fadeOut();
+		$("#swears").fadeOut();
 		$("#tweets p").remove();
 		s.stop();
 		});
+		
+	$("#help").click(function(){
+
+		$("#search").fadeOut();
+		$("#inpot").fadeOut();
+		$("#swears").fadeOut();
+		$("#title").fadeOut();
+		$("#tweets p").remove();
+		$("#apple").css("visibility", "visible");
+		$("#orange").css("visibility", "hidden");
+		$("#hreturn").css("visibility", "visible");
+		$("#areturn").css("visibility", "hidden");
+		$("#help").css("visibility", "hidden");
+		$("#jesus").css("visibility", "visible");
+		s.stop();
+		});
+		
+		$("#jesus").click(function(){
+
+		$("#search").fadeOut();
+		$("#inpot").fadeOut();
+		$("#swears").fadeOut();
+		$("#title").fadeOut();
+		$("#tweets p").remove();
+		$("#orange").css("visibility", "visible");
+		$("#apple").css("visibility", "hidden");
+		$("#areturn").css("visibility", "visible");
+		$("#hreturn").css("visibility", "hidden");
+		$("#areturn").css("visibility", "visible");
+		$("#jesus").css("visibility", "hidden");
+		$("#help").css("visibility", "visible");
+		s.stop();
+		});
+		
+		$("#hreturn").click(function(){
+		
+		$("#title").fadeIn();
+		$("#inpot").fadeIn();
+		$("#apple").css("visibility", "hidden");
+		$("#hreturn").css("visibility", "hidden");
+		$("#help").css("visibility", "visible");
+		s.stop();
+		});
+		
+		$("#areturn").click(function(){
+
+		$("#title").fadeIn();
+		$("#inpot").fadeIn();
+		$("#orange").css("visibility", "hidden");
+		$("#areturn").css("visibility", "hidden");
+		$("#jesus").css("visibility", "visible");
+		s.stop();
+		});
+		
+		
     
 	var count = true;
 	var twitCount = 1;

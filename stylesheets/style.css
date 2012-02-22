@@ -2,6 +2,10 @@
 	background: black;
 }
 
+#title{
+	text-shadow: 0px 0px 1px #000;
+}
+
 
 #header {
 	position:absolute;
@@ -17,6 +21,16 @@
 #sbutton{
 	height: 25px;
 	width: 45px;
+	border-radius: 12px;
+	box-shadow: 0px 0px 0px #000;
+	-moz-transition: all 0.2s linear;
+	-webkit-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+}
+
+#sbutton:hover {
+	box-shadow: 0px 0px 15px #fff;
+	
 }
 
 #search{
@@ -24,8 +38,18 @@
 	height: 25px;
 	width: 90px;
 	top: 90%;
-	left: 47.5%;
+	left: 45%;
 	visibility: hidden;
+	border-radius: 12px;
+	box-shadow: 0px 0px 0px #000;
+	-moz-transition: all 0.2s linear;
+	-webkit-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+}
+
+#search:hover {
+	box-shadow: 0px 0px 15px #fff;
+	
 }
 
 #inpot{
@@ -45,6 +69,100 @@
 	top: 80%;
 	left: 70%;
 	text-align: center;
+	visibility: hidden;
 }
 
+#help{
+	position: absolute;
+	top:92%;
+	left: 43%;
+	height: 20px;
+	width: 70px;
+	border-radius: 12px;
+	box-shadow: 0px 0px 0px #000;
+	-moz-transition: all 0.2s linear;
+	-webkit-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+}
 
+#help:hover {
+	box-shadow: 0px 0px 15px #fff;
+	
+}
+
+#jesus{
+	position: absolute;
+	top:92%;
+	left: 53%;
+	height: 20px;
+	width: 70px;
+	border-radius: 12px;
+	box-shadow: 0px 0px 0px #000;
+	-moz-transition: all 0.2s linear;
+	-webkit-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+}
+
+#jesus:hover {
+	box-shadow: 0px 0px 15px #fff;
+	
+}
+
+#apple{
+	visibility: hidden;
+	position: absolute;
+	top: 20%;
+	left:.5%;
+}
+
+#orange{
+	visibility: hidden;
+	position: absolute;
+	top: 20%;
+	left:.5%;
+}
+
+#areturn{
+	position: absolute;
+	top:92%;
+	left: 53%;
+	height: 20px;
+	width: 70px;
+	visibility: hidden;
+	border-radius: 12px;
+	box-shadow: 0px 0px 0px #000;
+	-moz-transition: all 0.2s linear;
+	-webkit-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+}
+
+#areturn:hover {
+	box-shadow: 0px 0px 15px #fff;
+	
+}
+
+#hreturn{
+	position: absolute;
+	top:92%;
+	left: 43%;
+	height: 20px;
+	width: 70px;
+	visibility: hidden;
+	border-radius: 12px;
+	box-shadow: 0px 0px 0px #000;
+	-moz-transition: all 0.2s linear;
+	-webkit-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+}
+
+#hreturn:hover {
+	box-shadow: 0px 0px 15px #fff;
+	
+}
+#dog{
+	text-shadow: 0px 0px 1px #000;
+}
+
+#cat{
+	text-shadow: 0px 0px 1px #000;
+}
