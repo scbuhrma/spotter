@@ -18,7 +18,7 @@
 	text-align: center;
 	}
 	
-#sbutton{
+#search_button{
 	height: 25px;
 	width: 45px;
 	border-radius: 12px;
@@ -28,7 +28,7 @@
 	transition: all 0.2s linear;
 }
 
-#sbutton:hover {
+#search_button:hover {
 	box-shadow: 0px 0px 15px #fff;
 	
 }
@@ -38,7 +38,7 @@
 	height: 25px;
 	width: 90px;
 	top: 90%;
-	left: 45%;
+	left: 46%;
 	visibility: hidden;
 	border-radius: 12px;
 	box-shadow: 0px 0px 0px #000;
@@ -52,7 +52,7 @@
 	
 }
 
-#inpot{
+#input{
 	position: absolute;
 	top: 50%;
 	left: 37.5%;
@@ -72,7 +72,7 @@
 	visibility: hidden;
 }
 
-#help{
+#help_button{
 	position: absolute;
 	top:92%;
 	left: 43%;
@@ -85,12 +85,12 @@
 	transition: all 0.2s linear;
 }
 
-#help:hover {
+#help_button:hover {
 	box-shadow: 0px 0px 15px #fff;
 	
 }
 
-#jesus{
+#about_button{
 	position: absolute;
 	top:92%;
 	left: 53%;
@@ -103,26 +103,26 @@
 	transition: all 0.2s linear;
 }
 
-#jesus:hover {
+#about_button:hover {
 	box-shadow: 0px 0px 15px #fff;
 	
 }
 
-#apple{
+#help_info{
 	visibility: hidden;
 	position: absolute;
 	top: 20%;
 	left:.5%;
 }
 
-#orange{
+#about_info{
 	visibility: hidden;
 	position: absolute;
 	top: 20%;
 	left:.5%;
 }
 
-#areturn{
+#about_return{
 	position: absolute;
 	top:92%;
 	left: 53%;
@@ -136,12 +136,12 @@
 	transition: all 0.2s linear;
 }
 
-#areturn:hover {
+#about_return:hover {
 	box-shadow: 0px 0px 15px #fff;
 	
 }
 
-#hreturn{
+#help_return{
 	position: absolute;
 	top:92%;
 	left: 43%;
@@ -155,14 +155,14 @@
 	transition: all 0.2s linear;
 }
 
-#hreturn:hover {
+#help_return:hover {
 	box-shadow: 0px 0px 15px #fff;
 	
 }
-#dog{
+#about_head{
 	text-shadow: 0px 0px 1px #000;
 }
 
-#cat{
+#help_head{
 	text-shadow: 0px 0px 1px #000;
 }

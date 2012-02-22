@@ -1,143 +1,32 @@
 $(document).ready(function(){
-	$("#sbutton").click(function(){
-
-
-		$("#inpot").fadeOut();
+	$("#search_button").click(function(){
+		$("#input").fadeOut();
 		$("#search").fadeIn();
 		$("#swears").fadeIn();
 		$("#search").css("visibility", "visible");
 		$("#swears").css("visibility", "visible");
-
+		
 		main();
-		});
 		
-		$("#help").click(function(){
-
-		$("#search").fadeOut();
-		$("#inpot").fadeOut();
-		$("#swears").fadeOut();
-		$("#title").fadeOut();
-		$("#tweets p").remove();
-		$("#apple").css("visibility", "visible");
-		$("#orange").css("visibility", "hidden");
-		$("#hreturn").css("visibility", "visible");
-		$("#areturn").css("visibility", "hidden");
-		$("#help").css("visibility", "hidden");
-		$("#jesus").css("visibility", "visible");
-		s.stop();
-		});
+	});
 		
-		$("#jesus").click(function(){
-
-		$("#search").fadeOut();
-		$("#inpot").fadeOut();
-		$("#swears").fadeOut();
-		$("#title").fadeOut();
-		$("#tweets p").remove();
-		$("#orange").css("visibility", "visible");
-		$("#apple").css("visibility", "hidden");
-		$("#areturn").css("visibility", "visible");
-		$("#hreturn").css("visibility", "hidden");
-		$("#areturn").css("visibility", "visible");
-		$("#jesus").css("visibility", "hidden");
-		$("#help").css("visibility", "visible");
-		s.stop();
-		});
 		
-		$("#hreturn").click(function(){
-		
-		$("#title").fadeIn();
-		$("#inpot").fadeIn();
-		$("#apple").css("visibility", "hidden");
-		$("#hreturn").css("visibility", "hidden");
-		$("#help").css("visibility", "visible");
-		s.stop();
-		});
-		
-		$("#areturn").click(function(){
-
-		$("#title").fadeIn();
-		$("#inpot").fadeIn();
-		$("#orange").css("visibility", "hidden");
-		$("#areturn").css("visibility", "hidden");
-		$("#jesus").css("visibility", "visible");
-		s.stop();
-		});
 		});
 
 
 function main() {
     
     
+		
+			
      var totalcusscount = 0;
    	 var term = $("#term").val();
      var s  = new Spotter("twitter.search",
-	{q:term, period:750, lang:"en"},
-	{buffer:true,bufferTimeout:7000});
+		{q:term, period:750, lang:"en"},
+		{buffer:true,bufferTimeout:7000});
 
 
-	 $("#search").click(function(){
-
-		$("#search").fadeOut();
-		$("#inpot").fadeIn();
-		$("#swears").fadeOut();
-		$("#tweets p").remove();
-		s.stop();
-		});
-		
-	$("#help").click(function(){
-
-		$("#search").fadeOut();
-		$("#inpot").fadeOut();
-		$("#swears").fadeOut();
-		$("#title").fadeOut();
-		$("#tweets p").remove();
-		$("#apple").css("visibility", "visible");
-		$("#orange").css("visibility", "hidden");
-		$("#hreturn").css("visibility", "visible");
-		$("#areturn").css("visibility", "hidden");
-		$("#help").css("visibility", "hidden");
-		$("#jesus").css("visibility", "visible");
-		s.stop();
-		});
-		
-		$("#jesus").click(function(){
-
-		$("#search").fadeOut();
-		$("#inpot").fadeOut();
-		$("#swears").fadeOut();
-		$("#title").fadeOut();
-		$("#tweets p").remove();
-		$("#orange").css("visibility", "visible");
-		$("#apple").css("visibility", "hidden");
-		$("#areturn").css("visibility", "visible");
-		$("#hreturn").css("visibility", "hidden");
-		$("#areturn").css("visibility", "visible");
-		$("#jesus").css("visibility", "hidden");
-		$("#help").css("visibility", "visible");
-		s.stop();
-		});
-		
-		$("#hreturn").click(function(){
-		
-		$("#title").fadeIn();
-		$("#inpot").fadeIn();
-		$("#apple").css("visibility", "hidden");
-		$("#hreturn").css("visibility", "hidden");
-		$("#help").css("visibility", "visible");
-		s.stop();
-		});
-		
-		$("#areturn").click(function(){
-
-		$("#title").fadeIn();
-		$("#inpot").fadeIn();
-		$("#orange").css("visibility", "hidden");
-		$("#areturn").css("visibility", "hidden");
-		$("#jesus").css("visibility", "visible");
-		s.stop();
-		});
-		
+	
 		
     
 	var count = true;
@@ -149,17 +38,81 @@ function main() {
 	    $("#tweets p:last-child").remove();
             twitCount=0;
             
+    
+          
             
-     var cussArray = tweet.text.match(/fuck|FUCK|\sass\s|bitch|pussy|arse|\sbeaner\s|\sbutt-pirate\s|\schink\s|\schinc\s|clit|cock|cunt|damn|dick|douche|faggit|faggot|\sfudgepacker\s|gringo|guido|honkey|jizz|kunt|kooch|nigger|nig|piss|queef|queer|shit|Shit|slut|\sspic\s|twat|tit|whore|wetback|wop/g);
+            
+     var cussArray = tweet.text.match(/fuck|\sass\s|bitch|pussy|arse|\sbeaner\s|\sbutt-pirate\s|\schink\s|\schinc\s|clit|cock|cunt|damn|dick|douche|faggit|faggot|\sfudgepacker\s|gringo|guido|honkey|jizz|kunt|kooch|nigger|nigga|piss|queef|queer|shit|Shit|slut|\sspic\s|twat|tit|whore|wetback|wop/gi);
      for(var i in cussArray){
      	totalcusscount++;
      }    
      
-     
-     var censor = tweet.text.replace(/fuck|\sass\s|bitch|pussy|arse|\sbeaner\s|\sbutt-pirate\s|\schink\s|\schinc\s|clit|cock|cunt|damn|dick|douche|faggit|faggot|\sfudgepacker\s|gringo|guido|honkey|jizz|kunt|kooch|nigger|nig|piss|queef|queer|shit|Shit|slut|\sspic\s|twat|tit|whore|wetback|wop/g,"*****");
+        $("#search").click(function(){
+
+		$("#search").fadeOut();
+		$("#input").fadeIn();
+		$("#swears").fadeOut();
+		$("#tweets p").remove();
+		s.stop();
+		});
+		
+	
+		$("#help_button").click(function(){
+
+		$("#search").fadeOut();
+		$("#input").fadeOut();
+		$("#swears").fadeOut();
+		$("#title").fadeOut();
+		$("#tweets p").remove();
+		$("#help_info").css("visibility", "visible");
+		$("#about_info").css("visibility", "hidden");
+		$("#help_return").css("visibility", "visible");
+		$("#about_return").css("visibility", "hidden");
+		$("#help_button").css("visibility", "hidden");
+		$("#about_button").css("visibility", "visible");
+		s.stop();
+		});
+		
+		$("#about_button").click(function(){
+
+		$("#search").fadeOut();
+		$("#input").fadeOut();
+		$("#swears").fadeOut();
+		$("#title").fadeOut();
+		$("#tweets p").remove();
+		$("#about_info").css("visibility", "visible");
+		$("#help_info").css("visibility", "hidden");
+		$("#about_return").css("visibility", "visible");
+		$("#help_return").css("visibility", "hidden");
+		$("#about_button").css("visibility", "hidden");
+		$("#help_button").css("visibility", "visible");
+		s.stop();
+		});
+		
+		$("#help_return").click(function(){
+		
+		$("#title").fadeIn();
+		$("#input").fadeIn();
+		$("#help_info").css("visibility", "hidden");
+		$("#help_return").css("visibility", "hidden");
+		$("#help_button").css("visibility", "visible");
+		s.stop();
+		});
+		
+		$("#about_return").click(function(){
+
+		$("#title").fadeIn();
+		$("#input").fadeIn();
+		$("#about_info").css("visibility", "hidden");
+		$("#about_return").css("visibility", "hidden");
+		$("#about_button").css("visibility", "visible");
+		s.stop();
+		});
+		
+     var censor = tweet.text.replace(/fuck|\sass\s|bitch|pussy|arse|\sbeaner\s|\sbutt-pirate\s|\schink\s|\schinc\s|clit|cock|cunt|damn|dick|douche|faggit|faggot|\sfudgepacker\s|gringo|guido|honkey|jizz|kunt|kooch|nigger|nigga|piss|queef|queer|shit|Shit|slut|\sspic\s|twat|tit|whore|wetback|wop/gi,"*****");
      	
     
-     $("#uhoh").text(totalcusscount);
+     $("#swear_count").text(totalcusscount);
             
             
 	}
