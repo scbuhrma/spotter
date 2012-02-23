@@ -68,11 +68,13 @@
 }
 
 #swears{
+	color: white;
 	position: absolute;
 	top: 80%;
 	left: 70%;
 	text-align: center;
 	visibility: hidden;
+	
 }
 
 #help_button{
@@ -115,14 +117,14 @@
 	visibility: hidden;
 	position: absolute;
 	top: 20%;
-	left:.5%;
+	left:13%;
 }
 
 #about_info{
 	visibility: hidden;
 	position: absolute;
 	top: 20%;
-	left:.5%;
+	left:20%;
 }
 
 #about_return{
@@ -174,4 +176,12 @@
 	position: absolute;
 	top: 70%;
 	left: 43%;
+}
+
+#tweets{
+	height: 20px;
+	width: 600px;
+	text-align: center;
+	position: absolute;
+	left: 20%;
 }
