@@ -5,10 +5,11 @@ $(document).ready(function(){
 		$("#swears").fadeIn();
 		$("#search").css("visibility", "visible");
 		$("#swears").css("visibility", "visible");
+		$("#search_count_div").css("visibility", "visible");
 		
 		main();
 		
-	});
+			});
 		
 		
 		});
@@ -16,9 +17,8 @@ $(document).ready(function(){
 
 function main() {
     
-    
-		
-			
+    	
+	 var total_tweet_count = 0;	
      var totalcusscount = 0;
    	 var term = $("#term").val();
      var s  = new Spotter("twitter.search",
@@ -37,28 +37,30 @@ function main() {
         if(twitCount==1){
 	    $("#tweets p:last-child").remove();
             twitCount=0;
+            total_tweet_count ++;
             
     
-          
-            
-            
-     var cussArray = tweet.text.match(/fuck|\sass\s|bitch|pussy|arse|\sbeaner\s|\sbutt-pirate\s|\schink\s|\schinc\s|clit|cock|cunt|damn|dick|douche|faggit|faggot|\sfudgepacker\s|gringo|guido|honkey|jizz|kunt|kooch|nigger|nigga|piss|queef|queer|shit|Shit|slut|\sspic\s|twat|tit|whore|wetback|wop/gi);
-     for(var i in cussArray){
-     	totalcusscount++;
-     }    
-     
         $("#search").click(function(){
+        
+        if(s.isSpotting()){
+			s.stop();
+		}
 
 		$("#search").fadeOut();
 		$("#input").fadeIn();
 		$("#swears").fadeOut();
 		$("#tweets p").remove();
-		s.stop();
+		$("#search_count_div").css("visibility", "hidden");
+		
 		});
 		
 	
 		$("#help_button").click(function(){
 
+		if(s.isSpotting()){
+			s.stop();
+		}
+		
 		$("#search").fadeOut();
 		$("#input").fadeOut();
 		$("#swears").fadeOut();
@@ -70,10 +72,16 @@ function main() {
 		$("#about_return").css("visibility", "hidden");
 		$("#help_button").css("visibility", "hidden");
 		$("#about_button").css("visibility", "visible");
-		s.stop();
+		$("#search_count_div").css("visibility", "hidden");
+		
+		
 		});
 		
 		$("#about_button").click(function(){
+		if(s.isSpotting()){
+			s.stop();
+		}
+		
 
 		$("#search").fadeOut();
 		$("#input").fadeOut();
@@ -86,7 +94,8 @@ function main() {
 		$("#help_return").css("visibility", "hidden");
 		$("#about_button").css("visibility", "hidden");
 		$("#help_button").css("visibility", "visible");
-		s.stop();
+		$("#search_count_div").css("visibility", "hidden");
+		
 		});
 		
 		$("#help_return").click(function(){
@@ -96,7 +105,7 @@ function main() {
 		$("#help_info").css("visibility", "hidden");
 		$("#help_return").css("visibility", "hidden");
 		$("#help_button").css("visibility", "visible");
-		s.stop();
+		
 		});
 		
 		$("#about_return").click(function(){
@@ -106,19 +115,39 @@ function main() {
 		$("#about_info").css("visibility", "hidden");
 		$("#about_return").css("visibility", "hidden");
 		$("#about_button").css("visibility", "visible");
-		s.stop();
+		
+		
+		
+		
+     
+     
 		});
+            
+            
+     var cussArray = tweet.text.match(/fuck|\sass\s|bitch|pussy|arse|\sbeaner\s|\sbutt-pirate\s|\schink\s|\schinc\s|clit|cock|cunt|damn|dick|douche|faggit|faggot|\sfudgepacker\s|gringo|guido|honkey|jizz|kunt|kooch|nigger|nigga|piss|queef|queer|shit|Shit|slut|\sspic\s|twat|tit|whore|wetback|wop/gi);
+     for(var i in cussArray){
+     	totalcusscount++;
+     }    
+     
+        
 		
      var censor = tweet.text.replace(/fuck|\sass\s|bitch|pussy|arse|\sbeaner\s|\sbutt-pirate\s|\schink\s|\schinc\s|clit|cock|cunt|damn|dick|douche|faggit|faggot|\sfudgepacker\s|gringo|guido|honkey|jizz|kunt|kooch|nigger|nigga|piss|queef|queer|shit|Shit|slut|\sspic\s|twat|tit|whore|wetback|wop/gi,"*****");
      	
     
-     $("#swear_count").text(totalcusscount);
+       
+     
+    
+    
+     $("#swear_count").text(totalcusscount + " swear words avoided");
+     $("#tweet_count").text("in " + total_tweet_count + " tweets");
+     $("#search_count").text("Searched for: " + term);
             
             
 	}
         
     $("#tweets").prepend($("<p>"+profile_image+' '+censor+"</p>"));    
 	twitCount++;
+	
 	
 	
 	
